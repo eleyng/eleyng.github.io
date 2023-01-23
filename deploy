@@ -1,0 +1,8 @@
+#!/bin/sh
+USER=eleyng
+HOST=cardinal.stanford.edu           
+DIR=WWW   # the directory where your web site files should go
+
+hugo && rsync -avz --delete public/ ${USER}@${HOST}:~/${DIR}
+
+exit 0
