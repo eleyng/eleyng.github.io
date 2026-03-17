@@ -23,7 +23,172 @@
         "@type": "WebSite",
         "url": "https:\/\/eleyng.github.io\/","inLanguage": "en","name": "Eley Ng"
     }
-    </script></head>
+    </script><style>
+    :root {
+        --home-accent: #1f2937;
+        --home-border: rgba(17, 24, 39, 0.12);
+        --home-muted-bg: rgba(17, 24, 39, 0.03);
+    }
+    .home-intro {
+        max-width: 980px;
+        margin: 0 auto;
+    }
+    .home-hero {
+        border: 0;
+        border-radius: 8px;
+        background: transparent;
+        padding: 0.95rem 0.95rem 0.4rem;
+        margin-bottom: 1.1rem;
+    }
+    .home-hero p {
+        margin: 0 0 0.95rem;
+        line-height: 1.56;
+    }
+    .home-link-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.45rem;
+        margin: 0.7rem 0 0.55rem;
+        justify-content: center;
+    }
+    .home-link-chip {
+        display: inline-block;
+        padding: 0.36rem 0.72rem;
+        border: 0;
+        border-radius: 4px;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        color: inherit;
+        transition: border-color 0.2s ease, background 0.2s ease;
+    }
+    .home-link-chip:hover {
+        background: var(--home-muted-bg);
+        text-decoration: none;
+    }
+    .home-email {
+        font-size: 0.95rem;
+        margin: 0.15rem 0 0;
+    }
+    .home-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: 1.1rem;
+    }
+    .home-card {
+        border: 0;
+        border-radius: 8px;
+        padding: 1rem 1rem 0.5rem;
+        background: transparent;
+    }
+    .home-card h3 {
+        margin: 0 0 0.9rem;
+        font-size: 1.22rem;
+        letter-spacing: 0;
+        color: var(--home-accent);
+        font-weight: 700;
+    }
+    .home-card ul {
+        margin-top: 0;
+        padding-left: 1.2rem;
+    }
+    .home-card li {
+        margin-bottom: 0.72rem;
+        line-height: 1.5;
+    }
+    .home-card li:last-child {
+        margin-bottom: 0;
+    }
+    .home-card p {
+        margin-top: 0.75rem;
+    }
+    .home-card a {
+        text-underline-offset: 2px;
+    }
+    .home-card table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 0.2rem;
+        border: 0 !important;
+    }
+    .home-card table,
+    .home-card table tbody,
+    .home-card table tr,
+    .home-card table th,
+    .home-card table td {
+        border: 0 !important;
+        box-shadow: none !important;
+    }
+    .home-card table td {
+        vertical-align: top;
+        padding: 0.72rem 0;
+        border-top: 0;
+        line-height: 1.6;
+    }
+    .home-card table tr:first-child td {
+        border-top: 0;
+    }
+    .home-card table td:first-child {
+        width: 205px;
+        min-width: 205px;
+        padding-right: 1rem;
+    }
+    .home-card table img {
+        border-radius: 6px;
+        width: 190px;
+        max-width: 190px;
+        height: auto;
+        display: block;
+        border: 0;
+    }
+    .home-card .compact-cell p {
+        margin: 0;
+    }
+    @media (max-width: 900px) {
+        .home-intro {
+            max-width: 100%;
+        }
+        .home-card table td:first-child {
+            width: 145px;
+            min-width: 145px;
+            padding-right: 0.8rem;
+        }
+        .home-card table img {
+            width: 130px;
+            max-width: 130px;
+        }
+    }
+    @media (max-width: 680px) {
+        .home-grid {
+            grid-template-columns: 1fr;
+        }
+        .home-card table,
+        .home-card tbody,
+        .home-card tr {
+            display: block;
+            width: 100%;
+        }
+        .home-card table td {
+            display: block;
+            width: 100%;
+            min-width: 0;
+            padding: 0.5rem 0;
+        }
+        .home-card table td:first-child {
+            padding-right: 0;
+        }
+        .home-card table img {
+            width: 100%;
+            max-width: 260px;
+        }
+        .home-hero,
+        .home-card {
+            padding-left: 0.85rem;
+            padding-right: 0.85rem;
+        }
+    }
+    </style></head>
     <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
@@ -69,13 +234,108 @@
         alt="/images/eley.png"
         title="/images/eley.png" /></a></div><div class="links"></div></div>
 <div class="single">
-                <div class="content" id="content"><p>I am currently a Research Scientist at Meta. I received my PhD studying robotics &amp; AI in the <a href="https://arm.stanford.edu/" target="_blank" rel="noopener noreffer">Stanford ARMLab</a>, where I was advised by <a href="https://profiles.stanford.edu/monroe-kennedy" target="_blank" rel="noopener noreffer">Monroe Kennedy III</a>. My doctoral research centered on improving collaboration in physical human-robot tasks. I was supported by the NSF Graduate Research Fellowship.</p>
+                <div class="content home-intro" id="content"><section class="home-hero"><p>I am currently a Research Scientist at Meta. I received my PhD studying robotics &amp; AI in the <a href="https://arm.stanford.edu/" target="_blank" rel="noopener noreffer">Stanford ARMLab</a>, where I was advised by <a href="https://profiles.stanford.edu/monroe-kennedy" target="_blank" rel="noopener noreffer">Monroe Kennedy III</a>. My doctoral research centered on improving collaboration in physical human-robot tasks. I was supported by the NSF Graduate Research Fellowship.</p>
 <p>Previously, I was advised by <a href="https://sites.utexas.edu/nanshulu/" target="_blank" rel="noopener noreffer">Nanshu Lu</a> as an undergraduate at UT Austin.</p>
 <!-- <p><strong>I am currently on the job market.</strong></p> -->
 <!-- raw HTML omitted -->
-<p><strong><a href="https://raw.githubusercontent.com/eleyng/eleyng.github.io/master/CV/EleyNgCV2025.pdf" target="_blank" rel="noopener noreffer">[CV]</a>  <a href="https://github.com/eleyng" target="_blank" rel="noopener noreffer">[Github]</a>  <a href="https://scholar.google.com/citations?user=X85Hhy8AAAAJ&hl=en" target="_blank" rel="noopener noreffer">[Google Scholar]</a> <a href="https://www.linkedin.com/in/eleyng/" target="_blank" rel="noopener noreffer">[LinkedIn]</a> [[firstname][lastname]media[at]gmail[dot]com]</strong> <br>
-<!-- raw HTML omitted --></p>
-<p><strong>News:</strong></p>
+<div class="home-link-row">
+<a class="home-link-chip" href="https://raw.githubusercontent.com/eleyng/eleyng.github.io/master/CV/EleyNgCV2025.pdf" target="_blank" rel="noopener noreffer">CV</a>
+<a class="home-link-chip" href="https://github.com/eleyng" target="_blank" rel="noopener noreffer">GitHub</a>
+<a class="home-link-chip" href="https://scholar.google.com/citations?user=X85Hhy8AAAAJ&hl=en" target="_blank" rel="noopener noreffer">Google Scholar</a>
+<a class="home-link-chip" href="https://www.linkedin.com/in/eleyng/" target="_blank" rel="noopener noreffer">LinkedIn</a>
+</div>
+<p class="home-email"><strong>Contact:</strong> [firstname][lastname]media[at]gmail[dot]com</p>
+</section>
+<!-- raw HTML omitted -->
+<div class="home-grid">
+<section class="home-card">
+<h3>Benchmarking Platforms</h3>
+<table>
+<tbody>
+<tr>
+<td style="text-align:center"><a class="lightgallery" href="/images/table-carrying-ai.gif" title="/images/table-carrying-ai.gif" data-thumbnail="/images/table-carrying-ai.gif">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/table-carrying-ai.gif"
+            data-srcset="/images/table-carrying-ai.gif, /images/table-carrying-ai.gif 1.5x, /images/table-carrying-ai.gif 2x"
+            data-sizes="auto"
+            alt="/images/table-carrying-ai.gif" height="100" width="200" />
+    </a></td>
+<td class="compact-cell" style="text-align:left"><a href="https://github.com/eleyng/table-carrying-ai" target="_blank" rel="noopener noreffer">[GitHub]</a> <strong>table-carrying-ai.</strong> An open-source Gym-style benchmark environment for human-robot cooperative table carrying, designed as a platform for training and evaluating collaborative algorithms.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="home-card">
+<h3>Publications</h3>
+<table>
+<tbody>
+<tr>
+<td style="text-align:center"><a class="lightgallery" href="/images/dp.gif" title="/images/dp.gif" data-thumbnail="/images/dp.gif">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/dp.gif"
+            data-srcset="/images/dp.gif, /images/dp.gif 1.5x, /images/dp.gif 2x"
+            data-sizes="auto"
+            alt="/images/dp.gif" height="100" width="200" />
+    </a></td>
+<td class="compact-cell" style="text-align:left"><a href="https://sites.google.com/view/diffusion-co-policy-hrc" target="_blank" rel="noopener noreffer">[Webpage]</a> <a href="https://arxiv.org/abs/2305.12171" target="_blank" rel="noopener noreffer">[Paper]</a> <a href="https://sites.google.com/view/diffusion-co-policy-hrc" target="_blank" rel="noopener noreffer">[Video]</a> <a href="https://github.com/eleyng/diffusion_copolicy" target="_blank" rel="noopener noreffer">[Code]</a> <strong>Diffusion Co-Policy for Synergistic Human-Robot Collaborative Tasks.</strong> <strong>E. Ng</strong>, Z. Liu, M. Kennedy III. <em>IEEE Robotics and Automation Letters, 2023</em>.</td>
+</tr>
+<tr>
+<td style="text-align:center"><a class="lightgallery" href="/images/icra2023-splash.png" title="/images/icra2023-splash.png" data-thumbnail="/images/icra2023-splash.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/icra2023-splash.png"
+            data-srcset="/images/icra2023-splash.png, /images/icra2023-splash.png 1.5x, /images/icra2023-splash.png 2x"
+            data-sizes="auto"
+            alt="/images/icra2023-splash.png" height="100" width="200" />
+    </a></td>
+<td class="compact-cell" style="text-align:left"><a href="https://sites.google.com/view/cooperative-carrying" target="_blank" rel="noopener noreffer">[Webpage]</a> <a href="https://arxiv.org/abs/2209.12890" target="_blank" rel="noopener noreffer">[Paper]</a> <a href="https://www.youtube.com/watch?v=4AXIYLjy9TM" target="_blank" rel="noopener noreffer">[Video]</a> <a href="https://github.com/eleyng/cooperative_planner" target="_blank" rel="noopener noreffer">[Code]</a> <strong>It Takes Two: Learning to Plan for Human-Robot Cooperative Carrying.</strong> <strong>E. Ng</strong>, Z. Liu, M. Kennedy III. <em>2023 IEEE International Conference on Robotics and Automation (ICRA), 7526-7532, 2023.</em></td>
+</tr>
+<tr>
+<td style="text-align:center"><a class="lightgallery" href="/images/rss-ldod-wkshp-splash.png" title="/images/rss-ldod-wkshp-splash.png" data-thumbnail="/images/rss-ldod-wkshp-splash.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/rss-ldod-wkshp-splash.png"
+            data-srcset="/images/rss-ldod-wkshp-splash.png, /images/rss-ldod-wkshp-splash.png 1.5x, /images/rss-ldod-wkshp-splash.png 2x"
+            data-sizes="auto"
+            alt="/images/rss-ldod-wkshp-splash.png" height="100" width="200" />
+    </a></td>
+<td class="compact-cell" style="text-align:left"><a href="https://drive.google.com/file/d/1G9_L5OxG1zSqV55yO08l09ptOJDvRD7-/view?usp=sharing" target="_blank" rel="noopener noreffer">[Paper]</a> <strong>Learning Action and State Sampling Distributions for Human-Robot Collaboration.</strong> <strong>E. Ng</strong>, Z. Liu, M. Kennedy III. <em>Workshop on Learning from Diverse, Offline Data <a href="https://sites.google.com/view/l-dod-rss2022?authuser=0#h.rju8ld12nf5u" target="_blank" rel="noopener noreffer">(L-DOD)</a> at RSS 2022, 2022.</em></td>
+</tr>
+<tr>
+<td style="text-align:center"><a class="lightgallery" href="/images/gpu_prog.jpg" title="/images/gpu_prog.jpg" data-thumbnail="/images/gpu_prog.jpg">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/gpu_prog.jpg"
+            data-srcset="/images/gpu_prog.jpg, /images/gpu_prog.jpg 1.5x, /images/gpu_prog.jpg 2x"
+            data-sizes="auto"
+            alt="/images/gpu_prog.jpg" height="100" width="200" />
+    </a></td>
+<td class="compact-cell" style="text-align:left"><a href="https://www.papers.phmsociety.org/index.php/phmconf/article/download/2437/1400" target="_blank" rel="noopener noreffer">[Paper]</a> <strong>GPU accelerated prognostics.</strong> G. E. Gorospe Jr, M. J. Daigle, S. Sankararaman, C. S. Kulkarni, <strong>E. Ng</strong>. <em>Annual Conference of the PHM Society, 2017.</em></td>
+</tr>
+<tr>
+<td style="text-align:center"><a class="lightgallery" href="/images/stretchable.jpg" title="/images/stretchable.jpg" data-thumbnail="/images/stretchable.jpg">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/stretchable.jpg"
+            data-srcset="/images/stretchable.jpg, /images/stretchable.jpg 1.5x, /images/stretchable.jpg 2x"
+            data-sizes="auto"
+            alt="/images/stretchable.jpg" height="100" width="200" />
+    </a></td>
+<td class="compact-cell" style="text-align:left"><a href="https://sites.utexas.edu/nanshulu/files/2021/08/36.pdf" target="_blank" rel="noopener noreffer">[Paper]</a> <strong>Indium Tin Oxide (ITO) serpentine ribbons on soft substrates stretched beyond 100%.</strong> S. Yang, <strong>E. Ng</strong>, N. Lu. <em>Extreme Mechanics Letters, 2015.</em></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="home-card">
+<h3>News</h3>
 <ul>
 <li><strong>10/18/23</strong> Our latest work, <a href="https://arxiv.org/abs/2305.12171" target="_blank" rel="noopener noreffer">Diffusion Co-Policy for Synergistic Human-Robot Collaborative Tasks</a>, has been accepted to RA-L!</li>
 <li><strong>7/1/23</strong> My <a href="https://searchworks.stanford.edu/view/14783526" target="_blank" rel="noopener noreffer">thesis</a>, titled &ldquo;Long-horizon prediction for human-robot collaboration&rdquo;, is now available online!</li>
@@ -84,6 +344,8 @@
 <li><strong>1/16/23</strong> My <a href="https://sites.google.com/view/cooperative-carrying/" target="_blank" rel="noopener noreffer">paper</a>, &ldquo;It Takes Two: Learning to Plan for Human-Robot Cooperative Carrying&rdquo;, has been accepted to ICRA 2023 in London, UK!</li>
 <li><strong>6/11/22</strong> My <a href="https://drive.google.com/file/d/1G9_L5OxG1zSqV55yO08l09ptOJDvRD7-/view?usp=sharing" target="_blank" rel="noopener noreffer">work</a> on &ldquo;Learning Action and State Sampling Distributions for Human-Robot Collaboration&rdquo;, has been accepted to the <a href="https://sites.google.com/view/l-dod-rss2022?authuser=0#h.rju8ld12nf5u" target="_blank" rel="noopener noreffer">Workshop on Learning from Diverse, Offline Data (L-DOD) at RSS 2022</a>.</li>
 </ul>
+</section>
+</div>
 </div>
             </div></div></div>
             </main><footer class="footer">

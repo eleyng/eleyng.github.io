@@ -40,7 +40,75 @@
                 "name": "Author"
             },"description": ""
     }
-    </script></head>
+    </script><style>
+    :root {
+        --research-accent: #2f6fed;
+        --research-border: rgba(32, 45, 68, 0.14);
+        --research-muted-bg: rgba(47, 111, 237, 0.04);
+    }
+    .research-content {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    .research-content > p > strong {
+        display: inline-block;
+        font-size: 1.1rem;
+        margin: 0.9rem 0 0.35rem;
+        color: var(--research-accent);
+        letter-spacing: 0.01em;
+    }
+    .research-content table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        border: 0 !important;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.45);
+        overflow: hidden;
+        margin-bottom: 1.1rem;
+    }
+    .research-content table,
+    .research-content table tbody,
+    .research-content table tr,
+    .research-content table th,
+    .research-content table td {
+        border: 0 !important;
+        box-shadow: none !important;
+    }
+    .research-content thead {
+        display: none;
+    }
+    .research-content tbody tr {}
+    .research-content td {
+        padding: 0.9rem;
+        vertical-align: top;
+        line-height: 1.7;
+    }
+    .research-content td:first-child {
+        width: 230px;
+    }
+    .research-content td a {
+        text-underline-offset: 2px;
+    }
+    .research-content .lightgallery img {
+        border-radius: 10px;
+        border: 1px solid var(--research-border);
+    }
+    .research-content table:nth-of-type(1) {
+        background: var(--research-muted-bg);
+    }
+    @media (max-width: 760px) {
+        .research-content td:first-child {
+            width: 42%;
+            min-width: 125px;
+            padding-right: 0.6rem;
+        }
+        .research-content td {
+            padding: 0.7rem;
+            line-height: 1.6;
+        }
+    }
+    </style></head>
     <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
@@ -77,7 +145,8 @@
     <div id="search-dropdown-mobile"></div>
 </div>
 <main class="main">
-                <div class="container"><div class="page single special"><h1 class="single-title animated pulse faster"></h1><div class="content" id="content"><p><strong>Code Releases</strong></p>
+                <div class="container"><div class="page single special"><h1 class="single-title animated pulse faster"></h1><div class="content research-content" id="content"><p><strong>Code Releases</strong></p>
+<p><em>Open-source implementations and environments related to my recent work.</em></p>
 <table>
 <thead>
 <tr>
@@ -96,11 +165,11 @@
             data-sizes="auto"
             alt="/images/table-carrying-ai.gif" height="100" width="200" />
     </a></td>
-<td style="text-align:left"><a href="https://github.com/eleyng/table-carrying-ai" target="_blank" rel="noopener noreffer">[Code]</a> <strong>Table-carrying-ai, a continuous state-action benchmark environment for human-robot cooperation.</strong></td>
+<td style="text-align:left"><a href="https://github.com/eleyng/table-carrying-ai" target="_blank" rel="noopener noreffer">[GitHub]</a> <strong>table-carrying-ai.</strong> An open-source Gym-style benchmark environment for human-robot cooperative table carrying, designed as a platform for training and evaluating collaborative algorithms.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Preprints</strong></p>
+<p><strong>Publications</strong></p>
 <table>
 <thead>
 <tr>
@@ -119,7 +188,7 @@
             data-sizes="auto"
             alt="/images/dp.gif" height="100" width="200" />
     </a></td>
-<td style="text-align:left"><a href="https://arxiv.org/abs/2305.12171" target="_blank" rel="noopener noreffer">[Paper]</a> <strong>Diffusion Co-Policy for Synergistic Human-Robot Collaborative Tasks.</strong> <strong>E. Ng</strong>, Z. Liu, M. Kennedy III.  <em>arXiv preprint, 2023</em>. (Webpage coming soon!)</td>
+<td style="text-align:left"><a href="https://sites.google.com/view/diffusion-co-policy-hrc" target="_blank" rel="noopener noreffer">[Webpage]</a> <a href="https://arxiv.org/abs/2305.12171" target="_blank" rel="noopener noreffer">[Paper]</a> <a href="https://sites.google.com/view/diffusion-co-policy-hrc" target="_blank" rel="noopener noreffer">[Video]</a> <a href="https://github.com/eleyng/diffusion_copolicy" target="_blank" rel="noopener noreffer">[Code]</a> <strong>Diffusion Co-Policy for Synergistic Human-Robot Collaborative Tasks.</strong> <strong>E. Ng</strong>, Z. Liu, M. Kennedy III.  <em>IEEE Robotics and Automation Letters, 2023</em>.</td>
 </tr>
 <tr>
 <td style="text-align:center"><a class="lightgallery" href="/images/icra2023-splash.png" title="/images/icra2023-splash.png" data-thumbnail="/images/icra2023-splash.png">
@@ -131,19 +200,8 @@
             data-sizes="auto"
             alt="/images/icra2023-splash.png" height="100" width="200" />
     </a></td>
-<td style="text-align:left"><a href="https://sites.google.com/view/cooperative-carrying" target="_blank" rel="noopener noreffer">[Webpage]</a> <a href="https://arxiv.org/abs/2209.12890" target="_blank" rel="noopener noreffer">[Paper]</a> <a href="https://www.youtube.com/watch?v=4AXIYLjy9TM" target="_blank" rel="noopener noreffer">[Video]</a> <a href="https://github.com/eleyng/cooperative_planner" target="_blank" rel="noopener noreffer">[Code]</a> <strong>It Takes Two: Learning to Plan for Human-Robot Cooperative Carrying.</strong> <strong>E. Ng</strong>, Z. Liu, M. Kennedy III.  <em>To appear in IEEE Int&rsquo;l Conf. on Robotics and Automation (ICRA) 2023.</em></td>
+<td style="text-align:left"><a href="https://sites.google.com/view/cooperative-carrying" target="_blank" rel="noopener noreffer">[Webpage]</a> <a href="https://arxiv.org/abs/2209.12890" target="_blank" rel="noopener noreffer">[Paper]</a> <a href="https://www.youtube.com/watch?v=4AXIYLjy9TM" target="_blank" rel="noopener noreffer">[Video]</a> <a href="https://github.com/eleyng/cooperative_planner" target="_blank" rel="noopener noreffer">[Code]</a> <strong>It Takes Two: Learning to Plan for Human-Robot Cooperative Carrying.</strong> <strong>E. Ng</strong>, Z. Liu, M. Kennedy III.  <em>2023 IEEE International Conference on Robotics and Automation (ICRA), 7526-7532, 2023.</em></td>
 </tr>
-</tbody>
-</table>
-<p><strong>Publications</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center"></th>
-<th style="text-align:left"></th>
-</tr>
-</thead>
-<tbody>
 <tr>
 <td style="text-align:center"><a class="lightgallery" href="/images/rss-ldod-wkshp-splash.png" title="/images/rss-ldod-wkshp-splash.png" data-thumbnail="/images/rss-ldod-wkshp-splash.png">
         <img
@@ -154,7 +212,7 @@
             data-sizes="auto"
             alt="/images/rss-ldod-wkshp-splash.png" height="100" width="200" />
     </a></td>
-<td style="text-align:left"><a href="https://drive.google.com/file/d/1YS8kO7xnCmG6SIU0xKvqSqz0_7adeCxb/view?usp=share_link" target="_blank" rel="noopener noreffer">[Paper]</a> <strong>Learning Action and State Sampling Distributions for Human-Robot Collaboration.</strong>  <strong>E. Ng</strong>, Z. Liu, M. Kennedy III.   <!-- raw HTML omitted --><!-- raw HTML omitted -->  *Workshop on Learning from Diverse, Offline Data <a href="https://sites.google.com/view/l-dod-rss2022?authuser=0#h.rju8ld12nf5u" target="_blank" rel="noopener noreffer">(L-DOD)</a> at RSS 2022.</td>
+<td style="text-align:left"><a href="https://drive.google.com/file/d/1G9_L5OxG1zSqV55yO08l09ptOJDvRD7-/view?usp=sharing" target="_blank" rel="noopener noreffer">[Paper]</a> <strong>Learning Action and State Sampling Distributions for Human-Robot Collaboration.</strong>  <strong>E. Ng</strong>, Z. Liu, M. Kennedy III.   <!-- raw HTML omitted --><!-- raw HTML omitted -->  <em>Workshop on Learning from Diverse, Offline Data <a href="https://sites.google.com/view/l-dod-rss2022?authuser=0#h.rju8ld12nf5u" target="_blank" rel="noopener noreffer">(L-DOD)</a> at RSS 2022, 2022.</em></td>
 </tr>
 <tr>
 <td style="text-align:center"><a class="lightgallery" href="/images/gpu_prog.jpg" title="/images/gpu_prog.jpg" data-thumbnail="/images/gpu_prog.jpg">
